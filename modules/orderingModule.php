@@ -38,7 +38,7 @@ class Ordering{
     
     public static function returnButton(){
         
-        if(self::$currentStage == '1' || self::$currentStage == '3' || self::$currentStage == '4'){
+        if(self::$currentStage == '1' || self::$currentStage == '3a' || self::$currentStage == '3b'){
             
             echo '
             
