@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css\\style.css">
     <?php
     require "modules\\signInAndLogOutButtons.php";
-    require "modules\\orderListModel.php";
+    require "modules\\orderListModule.php";
     ?>
 </head>
 <body>
