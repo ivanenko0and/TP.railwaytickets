@@ -25,13 +25,8 @@
         
         $login = "";
         $pass = "";
-        $isAccountExist = "";
         
-        $loginError = "";
-        $passError = "";
-        
-        
-        signIn();
+        $error = signIn();
         
         ?>
         
@@ -41,11 +36,15 @@
             <p align=center>Вхід</p>
             <input type="text" class="input_text" placeholder="Логін" name="login" value="<?php echo $login;?>" required>
             
-            <p class="error_text"><?php echo $loginError;?></p>
+            <p class="error_text"><?php 
+                if($error == "loginError")
+                echo "Акаунту з таким логіном не існує";?></p>
             
             <input type="password" class="input_text" placeholder="Пароль" name="pass" value="<?php echo $pass;?>" required>
             
-            <p class="error_text"><?php echo $passError;?></p>
+            <p class="error_text"><?php 
+                if($error == "passError")
+                echo "Введіть правильний пароль";?></p>
             
             
             <input type="submit" class="input_text" value="Увійти">
