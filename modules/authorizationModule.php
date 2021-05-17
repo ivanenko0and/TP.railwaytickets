@@ -18,9 +18,9 @@ function signIn(){
 
             $results = $db->query('SELECT * FROM Users WHERE Email="'. $login. '"');
             if(($results->fetchArray()) == null){
-               $loginError = "Акаунту з таким логіном не існує";
+               return "loginError";
             }else{
-               $passError = "Введіть правильний пароль";
+               return "passError";
             }
 
         }else{
